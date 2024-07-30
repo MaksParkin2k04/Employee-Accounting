@@ -18,13 +18,15 @@ namespace Employee_Accounting
                 keyinfo = Console.ReadKey();
                 switch (keyinfo.Key)
                 {
-
                     case ConsoleKey.D1:
-                        Console.Clear();
+                       Console.Clear();
                         LogIn();
-                       
                         break;
 
+                    case ConsoleKey.D2:
+                        Console.Clear();
+                        Registration();
+                        break;
                 }
             } while (true);
         }
@@ -41,13 +43,21 @@ namespace Employee_Accounting
         }
 
         static void LogIn()
-        {   
+        {
             Console.WriteLine("Вход в систему");
+
+            CheckLogIn checkLogIn = new CheckLogIn();
+            checkLogIn.LogIn();
+
+        }
+        static void Registration()
+        {   
+            Console.WriteLine("Регистрация в системе");
             Console.WriteLine("Введите свои данные \n");
 
             MainRegistration mainRegistration = new MainRegistration();
+            mainRegistration.InputLogIn();
 
-           
 
         }
     }

@@ -12,7 +12,7 @@ namespace Employee_Accounting.viewModel
     public class MainRegistration
     {
 
-        public static async void InputLogIn()
+        public  async void InputLogIn()
         {
             Console.WriteLine("Введите ваше имя: ");
             string firstName = Console.ReadLine();
